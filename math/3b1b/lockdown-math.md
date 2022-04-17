@@ -28,7 +28,7 @@ Resource: LATEX Math [cheatsheet](http://tug.ctan.org/info/undergradmath/undergr
 4. When faced with trig, try drawing various circles and triangles.
 5. [GeoGebra](https://www.geogebra.org/calculator) is a good visual tool for representing algebra geometrically and vise versa.
 
-## Teaching strats
+## Pedagogy
 
 1. Live multiple-choice questions: when writing them, make note of what errors would cause incorrect choices. Once answers come in, look at the distribution of responses and comment on likely sources of error. Help students fail forward and thus benefit from having tried answering.
 
@@ -95,7 +95,7 @@ Triangle trigonometry: `SOH CAH TOA`
 - $\cos(\theta)=a/h$
 - $\tan(\theta)=o/a$
 
-To instead work with the unit circle, scale the length of each side of the triangle by $\frac{1}{h}$ so that the hypotenuse is one unit long: $h=1$. Now,
+To instead work with the unit circle, scale the length of each side of the triangle by $\frac{1}{h}$ so that the hypotenuse is one unit long: $h'=1$. Now,
 - $y=\sin(\theta)=\frac{1}{h}o$
 - $x=\cos(\theta)=\frac{1}{h}a$
 
@@ -105,6 +105,8 @@ To instead work with the unit circle, scale the length of each side of the trian
 Notice that walking around the unit circle, the length of the tangent:
 - at $(1,0)$, $\tan(0) = 0$
 - at $(0,1)$, $\tan(\frac{\pi}{2}) \approx \inf$
+
+![https://youtu.be/yBw67Fb31Cs?list=PLZHQObOWTQDP5CVelJJ1bNDouqrAhVPev&t=3584](img/tangent.PNG "Location of the tangent on the unit circle")
 
 ### Pythagorean theorem
 From the side lengths of the "unit-hypotenuse triangle" above,
@@ -137,9 +139,11 @@ $$
 \Rightarrow o'=\sin^2(\theta)
 $$
 
-Proving the Pythagorean theorem: $1=h=a'+o'=\cos^2(\theta)+\sin^2(\theta)=x^2+y^2$.
+In the following figure, $s=a'$ and $s'=o'$:
 
 ![https://youtu.be/yBw67Fb31Cs?list=PLZHQObOWTQDP5CVelJJ1bNDouqrAhVPev&t=4181](img/squared-cosines.PNG "Squared (co)sines")
+
+Proving the Pythagorean theorem: $1=h=a'+o'=\cos^2(\theta)+\sin^2(\theta)=x^2+y^2$.
 
 ## 3: Complex number fundamentals
 
@@ -153,7 +157,7 @@ Proving the Pythagorean theorem: $1=h=a'+o'=\cos^2(\theta)+\sin^2(\theta)=x^2+y^
 ### Operations on complex numbers
 Addition: like 2D vectors.
 $$
-r_1+c_1i + r_2+c_2i = (r_1+r+2) + (c_1+c_2)i
+r_1+c_1i + r_2+c_2i = (r_1+r_2) + (c_1+c_2)i
 $$
 
 Multiplication: algebreically, with the distributive property.
@@ -163,7 +167,7 @@ $$
 = (r_1r_2 - c_1c_2) + (r_1c_2 + r_2c_1)i
 $$
 
-Division: multiplication by the inverse $\frac{1}{r+ci}$
+Division: multiplication by the inverse $\frac{1}{r+ci}$.
 
 ### Linearly algebraic representation of complex numbers
 
@@ -190,12 +194,12 @@ $$
 z=\cos(\theta) + i\sin(\theta)=cis(\theta)
 $$
 
-Multiply any point on the complex plane by $z=cis(\theta)$ to rotate it by $\theta radian.
+Multiply any point on the complex plane by $z=cis(\theta)$ to rotate it by $\theta$ radian.
 
 #### Trigonometric angle sum identities
 Instead of memorizing the trig sum identities, think of `adding two angles together` in terms of rotating a point from $(1,0)$ twice consecutively, ie. multiplying the complex number representations of the two angles together.
 $$
-cis(\alpha+\beta)=cis(\alpha)*cis(\beta)
+cis(\alpha+\beta)=cis(\alpha)*cis(\beta) \\
 \lbrack\cos(\alpha+\beta) + i\sin(\alpha+\beta)]=[\cos(\alpha) + i\sin(\alpha)][\cos(\beta) + i\sin(\beta)]
 $$
 
@@ -209,7 +213,7 @@ From the latter point, we can understand [why $\cos^2(\theta) \approx \cos(2\the
 
 ### Complex numbers and Polynomials
 
-The fundamanetal theorem of algebra states that every polynomial of degree $n$ has $n$ roots/solutions $\in \mathbb{C}$.
+The *fundamanetal theorem of algebra* states that every polynomial of degree $n$ has $n$ roots/solutions $\in \mathbb{C}$.
 
 #### Complex numbers and Euler
 
@@ -219,10 +223,10 @@ $$
 
 This has to do with the fact that adding the inputs to $cis(\alpha+\beta)$ is equal to multiplying the outputs $cis(\alpha)*cis(\beta)$, which in turn connects us to functions where $f(a+b)=f(a)*f(b)$, such as [squared (co)sines](#squared-cosines). We will cover this more carefully in the future, but for now notice that:
 $$
-e^{i\alpha}*e^{i\beta} = e^{i(\alpha+\beta)}
+e^{i(\alpha+\beta)} = e^{i\alpha} * e^{i\beta}
 $$
 
 ### Fun facts about imaginary and complex numbers
 - Renee Descartes coined the term `imaginary` as a derogatory desription of $i$, and then we stuck with it as a convention
 - The $90\deg$-rotation-like multiplicative effect of $i$ geometrically justifies the Imaginary dimension being perpendicular to the Real.
-- The $\hat{i}, \hat{j}, \hat{k}$ convention of naming vectors in physics comes from the use of these symbols in quaternions, which are representations of 3D space using imaginary dimensions.
+- The $\hat{\imath}, \hat{\jmath}, \hat{k}$ convention of naming vectors in physics was adopted from the use of these symbols in quaternions, which are representations of 3D space using imaginary dimensions. Their use in the physics vector-notation context does not have to do with imaginary numbers.
