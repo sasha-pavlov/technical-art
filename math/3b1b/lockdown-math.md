@@ -8,6 +8,7 @@ Resource: LATEX Math [cheatsheet](http://tug.ctan.org/info/undergradmath/undergr
 
 - [3Blue1Brown's Lockdown Math](#3blue1browns-lockdown-math)
   - [Key takeaways](#key-takeaways)
+  - [Pedagogy](#pedagogy)
   - [1: The simpler quadratic formula](#1-the-simpler-quadratic-formula)
     - [The product as a difference of squares](#the-product-as-a-difference-of-squares)
     - [Factoring quadratics](#factoring-quadratics)
@@ -18,6 +19,15 @@ Resource: LATEX Math [cheatsheet](http://tug.ctan.org/info/undergradmath/undergr
       - [Tangent](#tangent)
     - [Pythagorean theorem](#pythagorean-theorem)
     - [Squared (co)sines](#squared-cosines)
+  - [3: Complex number fundamentals](#3-complex-number-fundamentals)
+    - [Assumptions for complex numbers](#assumptions-for-complex-numbers)
+    - [Operations on complex numbers](#operations-on-complex-numbers)
+    - [Linearly algebraic representation of complex numbers](#linearly-algebraic-representation-of-complex-numbers)
+    - [Rotation](#rotation)
+      - [Trigonometric angle sum identities](#trigonometric-angle-sum-identities)
+    - [Complex numbers and Polynomials](#complex-numbers-and-polynomials)
+      - [Complex numbers and Euler](#complex-numbers-and-euler)
+    - [Fun facts about imaginary and complex numbers](#fun-facts-about-imaginary-and-complex-numbers)
 
 
 ## Key takeaways
