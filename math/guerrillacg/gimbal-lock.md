@@ -37,6 +37,8 @@ Ex. Cameras often look side-to-side (rotate about $y$) but seldom look straight 
 - Bad camera rotation orders: `xyz` and `zyx`
 - Good camera rotation order: `yxz`
 
+The best solution is to use quaternions.
+
 ## Implementation details
 
 Note that in some applications (ex. `Maya`) rotation order is written backwards, ex. `zxy` corresponds to the good camera rotation order mentioned above.
