@@ -1,13 +1,15 @@
 # C# notes
 
-Personal notes on C#, especially as it pertains to scripting for Unity.
+Personal notes on C#, especially w/r/t scripting for Unity.
 
 - [C# notes](#c-notes)
   - [Types](#types)
     - [Classes vs structs](#classes-vs-structs)
     - [Type declaration](#type-declaration)
+    - [Floats](#floats)
   - [Data access](#data-access)
   - [Unity event methods](#unity-event-methods)
+  - [Loops](#loops)
   - [Debugging](#debugging)
 
 ## Types
@@ -17,6 +19,8 @@ Personal notes on C#, especially as it pertains to scripting for Unity.
 Csharp has both `classes` (objects/reference type) and `structs` (value type). Value types are allocated on the stack and thus deallocated when the stack unwinds, whereas reference types are allocated on the heap and garbage collected (more expensive). 
 
 However the [.NET docs](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct) recommend using class types in the vast majority of situations, except when instances of the type are small, short-lived and/or commonly embedded in other objects. Ex. `UnityEngine.Quaternion` is a struct.
+
+Structs should generally be immutable, like simple values, but Unity's `Vector` types are mutable for convenience/efficiency.
 
 Value types can be converted or cast into objects and back through `boxing`/`unboxing`.
 
@@ -39,6 +43,10 @@ An object's fields should only be modified by other code via `properties`, metho
 
 `Awake`: Invoked when the component is loaded in play mode, once during the script instance's lifetime.
 `Update`: Invoked every frame in play mode, before the scene is rendered from the POV of the main camera.
+
+## Loops
+
+Variables declared within a loop only get defined once, and are automatically reassigned thereafter. Thus it is memory-safe to declare loop-scoped vars.
 
 ## Debugging
 
