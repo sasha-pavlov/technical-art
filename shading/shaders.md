@@ -1,24 +1,4 @@
-# Catlike Basics
-
-General takeaways from the Catlike Coding Unity basics tutorials
-
-- [Catlike Basics](#catlike-basics)
-  - [Visualizing math](#visualizing-math)
-    - [Scene setup](#scene-setup)
-  - [Shaders](#shaders)
-    - [Surface shaders](#surface-shaders)
-
-## Visualizing math
-
-Graphs are visualizations of function behaviour; they which assign input(s) and output(s) to different axes, and then plot points where a function maps input(s) to output(s).
-
-### Scene setup
-
-To view the scene on a notebook-like 2D grid, remove scene effects (ex. skybox) and toggle the view to orthographic. Grid lines are spaced 1 unit apart.
-
-![https://catlikecoding.com/unity/tutorials/basics/building-a-graph/creating-a-line-of-cubes/y-equals-x-squared.png](img/y-equals-x-squared.png "Grid-like Unity scene view")
-
-## Shaders
+# Shaders
 
 The GPU renders 3D objects by running their shader programs. By writing shaders, we can create materials that use custom math/logic to decide how a point should be visualized.
 
@@ -30,7 +10,17 @@ Shaders are efficient to update. A single material can be assigned to many asset
 
 Thus, pretty much anything that can be done with a texture or texture-like map is a fair target for shader creation.
 
-### Useful properties
+- [Shaders](#shaders)
+  - [Useful properties](#useful-properties)
+  - [Useful math](#useful-math)
+    - [Sinusoidal functions](#sinusoidal-functions)
+    - [Saturation](#saturation)
+  - [Common types of shaders](#common-types-of-shaders)
+    - [Surface shaders](#surface-shaders)
+
+See also `shader-graph.md` and `unity-shader-language.md` for language/tool-specific notes.
+
+## Useful properties
 
 Within a shader we can use any of the following properties to determine the rendering of a vertex:
 
@@ -38,21 +28,23 @@ Within a shader we can use any of the following properties to determine the rend
 - `position`, world or local. A 3-dimensional vector.
 - `time`.
 
-### Useful math
+## Useful math
 
-#### Sinusoidal functions
+### Sinusoidal functions
 
 Bound within a fixed range.
 
 Position along the y axis (ie. distance from the x axis) as you walk around a circle.
 
-#### Saturation
+### Saturation
 
 Clamp all components to [0,1].
 
 Common shader operation, available in all shader langs. Use to ensure that:
 
 - color components stay in range
+
+## Common types of shaders
 
 ### Surface shaders
 
