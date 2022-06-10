@@ -1,0 +1,13 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "omnisharp.useModernNet": false,
+  "omnisharp.sdkIncludePrereleases": false,
+  "[csharp]": {
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
