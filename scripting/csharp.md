@@ -2,14 +2,20 @@
 
 Personal notes on C#, especially w/r/t scripting for Unity.
 
-- [C# notes](#c-notes)
+- [Csharp notes](#csharp-notes)
   - [Types](#types)
     - [Classes vs structs](#classes-vs-structs)
     - [Type declaration](#type-declaration)
     - [Floats](#floats)
-  - [Data access](#data-access)
+    - [Arrays](#arrays)
+  - [Assignment](#assignment)
+    - [Setting properties](#setting-properties)
   - [Unity event methods](#unity-event-methods)
   - [Loops](#loops)
+  - [Libraries](#libraries)
+    - [Delegate functions](#delegate-functions)
+    - [Enums](#enums)
+  - [Operations](#operations)
   - [Debugging](#debugging)
 
 ## Types
@@ -36,7 +42,7 @@ var time = DateTime.Now;
 
 Game engines (incl. Unity) typically use single-precision floating-point values, ie. `float` rather than `double`.
 
-## Arrays
+### Arrays
 
 Arrays are objects, thus they must be instantiated (with a determined length) and are passed-by-reference.
 
@@ -83,6 +89,41 @@ asset.localPosition = position;
 Variables declared within a loop only get defined once, and are automatically reassigned thereafter. Thus it is memory-safe to declare loop-scoped vars.
 
 **Incrementing**: `++i` increments first in the expression, `i++` increments last.
+
+## Libraries
+
+Classes that provide non-component (non-instanceable) code are marked `static`.
+
+Non-instanceable (class) methods are also `static`.
+
+To use all of a class' constant and static members without needing to explicitly invoke it, import a class as `static`, as below:
+
+```csharp
+using static UnityEngine.Mathf;
+...
+y = Sin(x);
+```
+
+### Delegate functions
+
+Delegate functions can delegate work to any function that satisfies their method signature, including both static and instance methods.
+
+### Enums
+
+Enums can be used to index arrays in a key-value form.
+
+Enums load as dropdown menus in the Unity inspector.
+
+## Operations
+
+For expressions wih variables, realtime multiplication is preferable to realtime division.
+
+```csharp
+// instead of runtime divide of var
+var y = x / 1.5f;
+// prefer compile-time divide of constants
+var y = x * (2f / 3f);
+```
 
 ## Debugging
 

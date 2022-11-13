@@ -1,4 +1,4 @@
-// From Catlike Coding Unity Basics 2: Building a Graph
+// From Catlike Coding Unity Basics 2 and 3
 //      https://catlikecoding.com/unity/tutorials/basics/building-a-graph/
 
 using UnityEngine;

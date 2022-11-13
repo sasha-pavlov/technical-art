@@ -11,8 +11,11 @@ Shaders are efficient to update. A single material can be assigned to many asset
 Thus, pretty much anything that can be done with a texture or texture-like map is a fair target for shader creation.
 
 - [Shaders](#shaders)
-  - [Useful properties](#useful-properties)
-  - [Useful math](#useful-math)
+  - [Unity settings for visual quality](#unity-settings-for-visual-quality)
+    - [VSync](#vsync)
+    - [Shadows](#shadows)
+  - [Inputs for shaders](#inputs-for-shaders)
+  - [Math for shaders](#math-for-shaders)
     - [Sinusoidal functions](#sinusoidal-functions)
     - [Saturation](#saturation)
   - [Common types of shaders](#common-types-of-shaders)
@@ -20,7 +23,29 @@ Thus, pretty much anything that can be done with a texture or texture-like map i
 
 See also `shader-graph.md` and `unity-shader-language.md` for language/tool-specific notes.
 
-## Useful properties
+## Unity settings for visual quality
+
+To maximize performance:
+- only have one scene or game window visible
+- collapse large object hierarchies
+
+### VSync
+
+Enabling Vsync in Game view (`Free Apect` dropdown) synchronizes the framerate with the display refresh rate, reducing visual tearing. Unreliable if a scene window is visible.
+
+### Shadows
+
+Unity renders shadows into textures. Settings for this can be found in:
+- default render pipeline: `Edit > Project Settings > Quality > Shadows`
+- URP: `URP asset inspector > Shadows`
+
+Shadow settings:
+- `Shadow Distance`: reduce area mapped to shadow maps, increasing nearby shadow resolution but reducing distal shadow quality
+- `Shadow Cascades`: use up to 4 shadow maps, sampling from them based on distance. Nearby shadows have a higher resolution, but shadow rendering happens multiple times.
+- `Soft Shadows` (set by `Quality Level` in the default render pipeline)
+- `Shadow Resolution` (set by `Quality Level` quality in the default render pipeline)
+
+## Inputs for shaders
 
 Within a shader we can use any of the following properties to determine the rendering of a vertex:
 
@@ -28,7 +53,7 @@ Within a shader we can use any of the following properties to determine the rend
 - `position`, world or local. A 3-dimensional vector.
 - `time`.
 
-## Useful math
+## Math for shaders
 
 ### Sinusoidal functions
 

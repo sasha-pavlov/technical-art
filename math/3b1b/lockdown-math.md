@@ -93,8 +93,8 @@ $$
 
 ### Walking around the unit circle
 Starting at $(1,0)$ on the unit circle, with a tether tied to the center of the circle forming an angle $\theta$ relative to the start-position, and walking counter-clockwise:
-- $\sin(\theta)$ is the distance from the $x$-axis
-- $\cos(\theta)$ is the distance from the $y$-axis
+- $\sin(\theta)$ is the distance from the $x$-axis, ie. the $y$-value
+- $\cos(\theta)$ is the distance from the $y$-axis, ie. the $x$-value
 - One full circuit is $2\pi$ long
 
 ![https://youtu.be/yBw67Fb31Cs?list=PLZHQObOWTQDP5CVelJJ1bNDouqrAhVPev&t=933](img/walk-around-the-unit-circle.PNG "Walking around the unit circle: cosine")
